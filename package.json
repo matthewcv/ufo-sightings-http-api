@@ -1,0 +1,23 @@
+{
+  "name": "ufo-sightings-http-api",
+  "version": "1.0.0",
+  "description": "an HTTP API back end for reporting UFO sightings",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewcv/ufo-sightings-angular1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewcv/ufo-sightings-angular1/issues"
+  },
+  "homepage": "https://github.com/matthewcv/ufo-sightings-angular1#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0"
+  }
+}
