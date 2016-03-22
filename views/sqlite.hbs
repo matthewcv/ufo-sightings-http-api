@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{filename}}</title>
+    <style>
+        .table tr.pk{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+{{#each tables}}
+    <h3><a href="{{../filename}}/{{name}}">{{name}}</a></h3>
+    <table class="table">
+        <tr>
+            <th>Column Name</th>
+            <th>Data Type</th>
+        </tr>
+        {{#each columns}}
+            <tr {{#if pk}}class="pk"{{/if}}>
+                <td>{{name}}</td>
+                <td>{{type}}</td>
+            </tr>
+        {{/each}}
+    </table>
+{{/each}}
+</body>
+</html>
