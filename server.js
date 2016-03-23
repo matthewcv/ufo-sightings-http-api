@@ -10,7 +10,7 @@ app.use(require('./sqlite-middleware'));
 app.use(function(req,res,next){
 
     res.render('index', {
-        filename:'uforeports.sqlite'
+        fileName:'uforeports.sqlite'
     })
 
 })
