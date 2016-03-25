@@ -95,7 +95,7 @@ module.exports.queryTable = function queryTable(file, table, odata){
         var where = getWhere(file,table,odata.$filter, dbParams);
         var order = getOrder(file,table,odata.$orderby);
         var query = `select * from ${table} ${where} ${order} limit ${limit} offset ${offset}`;
-        console.log(query);
+        //console.log(query);
         return sqlite.createDatabase(file).then(db =>{
             return db.all(query, dbParams)
         })
@@ -106,7 +106,7 @@ module.exports.queryTable = function queryTable(file, table, odata){
 var ops = "=,>,>=,<,<=,<>".split(',');
 
 function getWhere(file,table,filter,dbParams){
-    console.dir(filter,{depth:null,colors:true});
+    //console.dir(filter,{depth:null,colors:true});
     
     if(filter){
         var propOrLit = function(thing){

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0d5e7a-b517-4fc9-9e56-339a9e784d1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/showtables.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uforeports.sqlite" afterPath="$PROJECT_DIR$/uforeports.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data-access.js" afterPath="$PROJECT_DIR$/data-access.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqlite-middleware.js" afterPath="$PROJECT_DIR$/sqlite-middleware.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/showtables.js" afterPath="$PROJECT_DIR$/test/showtables.js" />
     </list>
     <ignored path="ufo-sightings-angular1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,15 +36,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sqlite-middleware.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sqlite-middleware.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqlite-middleware.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!block;n#insertTable#0" expanded="false" />
-                <element signature="n#!!block;n#rowById#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="376">
+              <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,8 +49,8 @@
       <file leaf-file-name="data-access.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data-access.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -63,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showtables.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="showtables.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/showtables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="276">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -155,8 +150,8 @@
         <option value="$PROJECT_DIR$/spec/showtables.spec.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/data-access.js" />
-        <option value="$PROJECT_DIR$/test/showtables.js" />
         <option value="$PROJECT_DIR$/sqlite-middleware.js" />
+        <option value="$PROJECT_DIR$/test/showtables.js" />
       </list>
     </option>
   </component>
@@ -447,7 +442,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.tests">
+  <component name="RunManager" selected="Node.js.web server">
     <configuration default="false" name="get the tables for the sqlite file.will get the tables from the file" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -461,6 +456,22 @@
       <test-names>
         <name value="get the tables for the sqlite file" />
         <name value="will get the tables from the file" />
+      </test-names>
+      <method />
+    </configuration>
+    <configuration default="false" name="get the tables for the sqlite file.catches an exception inside a nested native promise" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options>-t 4000</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/showtables.js</test-file>
+      <test-names>
+        <name value="get the tables for the sqlite file" />
+        <name value="catches an exception inside a nested native promise" />
       </test-names>
       <method />
     </configuration>
@@ -534,14 +545,16 @@
       <browser url="http:///" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Mocha.tests" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.web server" />
       <item index="2" class="java.lang.String" itemvalue="Mocha.get the tables for the sqlite file.will get the tables from the file" />
+      <item index="3" class="java.lang.String" itemvalue="Mocha.get the tables for the sqlite file.catches an exception inside a nested native promise" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Mocha.get the tables for the sqlite file.will get the tables from the file" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Mocha.get the tables for the sqlite file.catches an exception inside a nested native promise" />
+        <item index="1" class="java.lang.String" itemvalue="Mocha.get the tables for the sqlite file.will get the tables from the file" />
       </list>
     </recent_temporary>
   </component>
@@ -561,44 +574,44 @@
       <workItem from="1458663490010" duration="3654000" />
       <workItem from="1458674167579" duration="16459000" />
       <workItem from="1458855360377" duration="1328000" />
-      <workItem from="1458864520101" duration="16795000" />
+      <workItem from="1458864520101" duration="21703000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="get_the_tables_for_the_sqlite_file_will_get_the_tables_from_the_file - 2016.03.25 at 14h 02m 48s.xml">
-      <configuration name="get the tables for the sqlite file.will get the tables from the file" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="get_the_tables_for_the_sqlite_file_will_get_the_tables_from_the_file - 2016.03.25 at 14h 03m 45s.xml">
-      <configuration name="get the tables for the sqlite file.will get the tables from the file" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="get_the_tables_for_the_sqlite_file_will_get_the_tables_from_the_file - 2016.03.25 at 14h 04m 19s.xml">
-      <configuration name="get the tables for the sqlite file.will get the tables from the file" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="get_the_tables_for_the_sqlite_file_will_get_the_tables_from_the_file - 2016.03.25 at 14h 04m 57s.xml">
-      <configuration name="get the tables for the sqlite file.will get the tables from the file" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="get_the_tables_for_the_sqlite_file_will_get_the_tables_from_the_file - 2016.03.25 at 14h 06m 58s.xml">
-      <configuration name="get the tables for the sqlite file.will get the tables from the file" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="get_the_tables_for_the_sqlite_file_will_get_the_tables_from_the_file - 2016.03.25 at 14h 07m 04s.xml">
-      <configuration name="get the tables for the sqlite file.will get the tables from the file" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests - 2016.03.25 at 13h 57m 58s.xml">
+    <history-entry file="tests - 2016.03.25 at 15h 34m 53s.xml">
       <configuration name="tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests - 2016.03.25 at 14h 00m 10s.xml">
+    <history-entry file="tests - 2016.03.25 at 15h 35m 04s.xml">
       <configuration name="tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests - 2016.03.25 at 14h 07m 19s.xml">
+    <history-entry file="tests - 2016.03.25 at 15h 38m 01s.xml">
       <configuration name="tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests - 2016.03.25 at 14h 07m 37s.xml">
+    <history-entry file="tests - 2016.03.25 at 15h 38m 20s.xml">
+      <configuration name="tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests - 2016.03.25 at 15h 41m 01s.xml">
+      <configuration name="tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests - 2016.03.25 at 15h 42m 43s.xml">
+      <configuration name="tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests - 2016.03.25 at 15h 42m 58s.xml">
+      <configuration name="tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests - 2016.03.25 at 15h 44m 13s.xml">
+      <configuration name="tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests - 2016.03.25 at 15h 44m 43s.xml">
+      <configuration name="tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests - 2016.03.25 at 15h 44m 49s.xml">
       <configuration name="tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38236000" />
+    <option name="totallyTimeSpent" value="43144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -611,7 +624,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3094" height="1690" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15273206" sideWeight="0.49451554" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297659" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -619,8 +632,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294606" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.3297659" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="3367" y="368" width="2343" height="1013" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25388083" sideWeight="0.5029046" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297659" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37056857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297659" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37056857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983542" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32156864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15273206" sideWeight="0.50548446" order="2" side_tool="true" content_ui="tabs" />
@@ -646,7 +659,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -663,10 +676,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!block;n#insertTable#0" expanded="false" />
-            <element signature="n#!!block;n#rowById#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,10 +747,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1225">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#insertTable#0" expanded="false" />
-            <element signature="n#!!block;n#rowById#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -895,30 +902,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data-access.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="250">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/showtables.js">
+    <entry file="file://$PROJECT_DIR$/sqlite-middleware.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="376">
+          <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqlite-middleware.js">
+    <entry file="file://$PROJECT_DIR$/test/showtables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!block;n#insertTable#0" expanded="false" />
-            <element signature="n#!!block;n#rowById#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="276">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

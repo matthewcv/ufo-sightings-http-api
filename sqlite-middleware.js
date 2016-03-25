@@ -22,16 +22,16 @@ router.get('/:file.sqlite/:table/:id', rowById);
 
 
 function insertTable(req,res){
-    tableExists(req,res,(fileName,tableName) =>{
+    return tableExists(req,res).then((names) =>{
         if(!req.body){
             res.status(400).send('missing body')
         }
 
-        return da.getTable(fileName,tableName).then(table => {
+        return da.getTable(names.fileName,names.tableName).then(table => {
 
             var data = [];
             var resData = {};
-            return da.getNextId(fileName,tableName).then(id =>{
+            return da.getNextId(names.fileName,names.tableName).then(id =>{
 
                 table.columns.forEach(c => {
                     if(c.pk){
@@ -44,17 +44,17 @@ function insertTable(req,res){
                     }
                 });
 
-                return da.insertRow(fileName,tableName,data).then(result =>{
+                return da.insertRow(names.fileName,names.tableName,data).then(result =>{
                     res.send(resData)
                 })
             })
         })
-    })
+    }).catch(errorHandler(req,res))
 }
 
 function rowById(req,res){
-    tableExists(req,res,(fileName, tableName) =>{
-        return da.getById(fileName,tableName,req.params.id)
+    return tableExists(req,res).then((names) =>{
+        return da.getById(names.fileName,names.tableName,req.params.id)
             .then(r =>{
                 if(r){
                     res.send(r)
@@ -62,15 +62,15 @@ function rowById(req,res){
                     res.sendStatus(404)
                 }
             })
-    })  
+    }).catch(errorHandler(req,res))
 }
 
 function showTables(req,res){
-    fileExists(req,res,(file) =>{
+    return fileExists(req,res).then((file) =>{
         var data = {
             fileName: req.dbFileName
         };
-        da.getTables(file).then(tables =>{
+        return da.getTables(file).then(tables =>{
             data.tables = tables;
 
             if(req.accepts('html')){
@@ -80,47 +80,14 @@ function showTables(req,res){
             }
 
         })
-    })
+    }).catch(errorHandler(req,res))
 }
 
-function fileExists(req,res, doesExist){
-    
-    
-    var fileName = path.join(__dirname, req.dbFileName);
-    fs.exists(fileName,(exists) =>{
-        if(exists){
-            doesExist(fileName)
-        }else{
-            res.sendStatus(404);
-        }
-    })
-}
-
-function tableExists(req,res, doesExist){
-    fileExists(req,res,(fileName) =>{
-        da.getTables(fileName).then(f =>{
-            var tableName = req.params.table;
-            var table = f.find(t => t.name == tableName);
-            if(table){
-                return doesExist(fileName,tableName)
-            }else{
-                res.sendStatus(404);
-            }
-        }).catch(er => {
-            if(er instanceof da.CriteriaError ||
-                er.name == "SyntaxError" && er.message){
-                res.status(400).send(new da.CriteriaError(er.message))
-            }
-            console.dir(er);
-            res.status(500).send(er.toString());
-        })
-        
-    })
-}
 
 function tableData(req,res){
     
-    tableExists(req,res,(fileName,tableName) =>{
+    return tableExists(req,res).then((names) =>{
+
         var odata = {};
         if(req.url.indexOf('?') >= 0){
             var query = decodeURI(req.url.substr(req.url.indexOf('?') + 1));
@@ -130,14 +97,65 @@ function tableData(req,res){
             }
         }
 
-        return da.queryTable(fileName, tableName,odata).then(data =>{
+        return da.queryTable(names.fileName, names.tableName,odata).then(data =>{
             res.send(data);
         })
-    })
+    }).catch(errorHandler(req,res))
 }
 
 
 
+function errorHandler(req,res){
+    return er => {
+        
+        if(er instanceof da.CriteriaError ||
+            er.name == "SyntaxError" && er.message){
+            res.status(400).send(new da.CriteriaError(er.message))
+        }
+        
+        res.status(500).send(er.toString());
+    }
+}
+
+function fileExists(req,res){
+
+    return new Promise((resolve,reject) =>{
+
+        var fileName = path.join(__dirname, req.dbFileName);
+        fs.exists(fileName,(exists) =>{
+            if(exists){
+                resolve(fileName)
+            }else{
+                res.sendStatus(404);
+                reject(404);
+            }
+        })
+    })
+
+
+}
+
+function tableExists(req,res){
+
+    return new Promise((resolve,reject) =>{
+
+        fileExists(req,res).then((fileName) =>{
+            da.getTables(fileName).then(f =>{
+                var tableName = req.params.table;
+                var table = f.find(t => t.name == tableName);
+                if(table){
+                    resolve({fileName,tableName})
+                }else{
+                    res.sendStatus(404);
+                    reject(404);
+                }
+            })
+
+        })
+    })
+
+
+}
 
 module.exports = router;
 
