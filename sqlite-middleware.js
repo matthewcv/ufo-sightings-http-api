@@ -90,7 +90,7 @@ function tableData(req,res){
 
         var odata = {};
         if(req.url.indexOf('?') >= 0){
-            var query = decodeURI(req.url.substr(req.url.indexOf('?') + 1));
+            var query = decodeURI(req.url.substr(req.url.indexOf('?') + 1)).replace("+"," ");
             odata = odp.parse(query);
             if(odata.error){
                 throw new da.CriteriaError(odata.error)
