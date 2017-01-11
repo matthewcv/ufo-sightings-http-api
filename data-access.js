@@ -179,9 +179,6 @@ function validateOdata(fileName,tableName,odata){
 }
 
 function getOrder(file,table,orderBy){
-    if(table == "uforeports"){
-        return "order by reported desc "
-    }
     if(orderBy) {
         var obStmt = 'order by ';
         obStmt += orderBy.map(ob => {
